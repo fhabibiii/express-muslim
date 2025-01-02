@@ -1,0 +1,24 @@
+{
+  "name": "backend-muslim",
+  "version": "1.0.0",
+  "description": "Aplikasi pengingat sholat dan jadwal ibadah untuk membantu pengguna menjalankan kewajiban dengan tepat waktu.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FHD",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.1.0",
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "prisma": "^6.1.0"
+  }
+}

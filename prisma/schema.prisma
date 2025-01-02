@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(255)
+  email     String   @unique(map: "email") @db.VarChar(255)
+  password  String   @db.VarChar(255)
+  city      String?  @db.VarChar(255) // Nama kota user
+  country   String?  @db.VarChar(255) // Nama negara user
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Cache {
+  id        Int      @id @default(autoincrement())
+  city      String   @db.VarChar(255) // Nama kota untuk cache
+  country   String   @db.VarChar(255) // Nama negara
+  fajr      String
+  sunrise   String
+  dhuhr     String
+  asr       String
+  maghrib   String
+  isha      String
+  imsak     String
+  date      String   // Tanggal cache dalam format yang sesuai
+  hijriDate String   // Tanggal hijriah
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

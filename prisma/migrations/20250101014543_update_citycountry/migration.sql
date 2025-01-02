@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `cache` ALTER COLUMN `city` DROP DEFAULT,
+    ALTER COLUMN `country` DROP DEFAULT;
