@@ -39,6 +39,8 @@ const login = async (req, res) => {
                 name: true,
                 email: true,
                 password: true,
+                city: true,
+                country: true,
             },
         });
 
