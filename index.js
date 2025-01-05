@@ -27,7 +27,7 @@ const port = 3000;
 
 //route
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('API is running smoothly')
 })
 
 //define routes
